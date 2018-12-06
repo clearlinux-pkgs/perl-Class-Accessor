@@ -64,9 +64,9 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.1Class/Accessor.pm
-/usr/lib/perl5/vendor_perl/5.28.1Class/Accessor/Fast.pm
-/usr/lib/perl5/vendor_perl/5.28.1Class/Accessor/Faster.pm
+/usr/lib/perl5/vendor_perl/5.28.1/Class/Accessor.pm
+/usr/lib/perl5/vendor_perl/5.28.1/Class/Accessor/Fast.pm
+/usr/lib/perl5/vendor_perl/5.28.1/Class/Accessor/Faster.pm
 
 %files dev
 %defattr(-,root,root,-)
