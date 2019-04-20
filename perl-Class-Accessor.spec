@@ -4,10 +4,10 @@
 #
 Name     : perl-Class-Accessor
 Version  : 0.51
-Release  : 12
+Release  : 13
 URL      : https://cpan.metacpan.org/authors/id/K/KA/KASEI/Class-Accessor-0.51.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/K/KA/KASEI/Class-Accessor-0.51.tar.gz
-Summary  : unknown
+Summary  : Automated accessor generation
 Group    : Development/Tools
 License  : Artistic-1.0-Perl
 BuildRequires : buildreq-cpan
@@ -22,6 +22,7 @@ Class::Accessor::Faster - even faster, using an array
 Summary: dev components for the perl-Class-Accessor package.
 Group: Development
 Provides: perl-Class-Accessor-devel = %{version}-%{release}
+Requires: perl-Class-Accessor = %{version}-%{release}
 
 %description dev
 dev components for the perl-Class-Accessor package.
