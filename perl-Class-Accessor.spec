@@ -4,7 +4,7 @@
 #
 Name     : perl-Class-Accessor
 Version  : 0.51
-Release  : 14
+Release  : 15
 URL      : https://cpan.metacpan.org/authors/id/K/KA/KASEI/Class-Accessor-0.51.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/K/KA/KASEI/Class-Accessor-0.51.tar.gz
 Summary  : Automated accessor generation
