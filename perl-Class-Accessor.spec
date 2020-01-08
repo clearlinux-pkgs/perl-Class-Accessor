@@ -4,12 +4,13 @@
 #
 Name     : perl-Class-Accessor
 Version  : 0.51
-Release  : 15
+Release  : 16
 URL      : https://cpan.metacpan.org/authors/id/K/KA/KASEI/Class-Accessor-0.51.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/K/KA/KASEI/Class-Accessor-0.51.tar.gz
-Summary  : Automated accessor generation
+Summary  : unknown
 Group    : Development/Tools
 License  : Artistic-1.0-Perl
+Requires: perl-Class-Accessor-perl = %{version}-%{release}
 BuildRequires : buildreq-cpan
 
 %description
@@ -28,14 +29,24 @@ Requires: perl-Class-Accessor = %{version}-%{release}
 dev components for the perl-Class-Accessor package.
 
 
+%package perl
+Summary: perl components for the perl-Class-Accessor package.
+Group: Default
+Requires: perl-Class-Accessor = %{version}-%{release}
+
+%description perl
+perl components for the perl-Class-Accessor package.
+
+
 %prep
 %setup -q -n Class-Accessor-0.51
+cd %{_builddir}/Class-Accessor-0.51
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
+export LANG=C.UTF-8
 if test -f Makefile.PL; then
 %{__perl} Makefile.PL
 make  %{?_smp_mflags}
@@ -45,7 +56,7 @@ else
 fi
 
 %check
-export LANG=C
+export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
@@ -65,12 +76,15 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.2/Class/Accessor.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Class/Accessor/Fast.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Class/Accessor/Faster.pm
 
 %files dev
 %defattr(-,root,root,-)
 /usr/share/man/man3/Class::Accessor.3
 /usr/share/man/man3/Class::Accessor::Fast.3
 /usr/share/man/man3/Class::Accessor::Faster.3
+
+%files perl
+%defattr(-,root,root,-)
+/usr/lib/perl5/vendor_perl/5.30.1/Class/Accessor.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Class/Accessor/Fast.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Class/Accessor/Faster.pm
