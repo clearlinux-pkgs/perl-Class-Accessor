@@ -4,7 +4,7 @@
 #
 Name     : perl-Class-Accessor
 Version  : 0.51
-Release  : 26
+Release  : 27
 URL      : https://cpan.metacpan.org/authors/id/K/KA/KASEI/Class-Accessor-0.51.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/K/KA/KASEI/Class-Accessor-0.51.tar.gz
 Summary  : unknown
@@ -85,6 +85,4 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.34.0/Class/Accessor.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Class/Accessor/Fast.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Class/Accessor/Faster.pm
+/usr/lib/perl5/*
